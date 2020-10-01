@@ -84,7 +84,7 @@
   },
   "reactSnap": {
     "cacheAjaxRequests": true,
-    "inlineCss": false,
+    "inlineCss": true,
     "http2PushManifest": true,
     "puppeteer": {
       "cache": false
