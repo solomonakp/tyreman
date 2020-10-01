@@ -4,7 +4,7 @@ import withLayout from '../components/layout/MainLayout';
 import { withLoader } from '../components/layout/Loader';
 import theme from '../components/theme';
 import PageBanner from '../components/layout/PageBanner';
-import TyreDelivery from '../components/deliveryInformation/Perks';
+import TyreDelivery from '../components/deliveryInformation/TyreDelivery';
 import Perks from '../components/deliveryInformation/Perks';
 import Subscribe from '../components/layout/Subscribe';
 import { BannerRacing } from '../components/svgs';
