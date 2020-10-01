@@ -21,9 +21,6 @@ import 'hamburgers/dist/hamburgers.min.css';
 import 'animate.css/animate.compat.css';
 // css end
 
-// components
-import Auth from './pages/auth';
-
 // fonts
 import CircularStdItEot from './assets/font/CircularStd-MediumItalic.eot';
 import CircularStdItWf2 from './assets/font/CircularStd-MediumItalic.woff2';
@@ -65,6 +62,8 @@ import CircularBookWf2 from './assets/font/CircularStd-Book.woff2';
 import CircularBookWf from './assets/font/CircularStd-Book.woff';
 import CircularBookTtf from './assets/font/CircularStd-Book.ttf';
 // fonts end
+// components
+import Auth from './pages/auth';
 import NotFound from './pages/NotFound.js';
 import { prerenderedLoadable } from './components/prerenderedLoadable';
 
