@@ -71,6 +71,9 @@ const Home = prerenderedLoadable(() => import('./pages/index'));
 const About = prerenderedLoadable(() => import('./pages/about'));
 const Tyres = prerenderedLoadable(() => import('./pages/tyres'));
 const Contact = prerenderedLoadable(() => import('./pages/contact'));
+const Category = prerenderedLoadable(() => import('./pages/categroy'));
+const Brands = prerenderedLoadable(() => import('./pages/brands.js'));
+
 const DeliveryInformation = prerenderedLoadable(() =>
   import('./pages/deliveryInformation')
 );
@@ -149,6 +152,16 @@ class App extends Component {
               exact
               path='/contact'
               render={(props) => <Contact {...props} {...appProps} />}
+            />
+            <Route
+              exact
+              path='/category'
+              render={(props) => <Category {...props} {...appProps} />}
+            />
+            <Route
+              exact
+              path='/brands'
+              render={(props) => <Brands {...props} {...appProps} />}
             />
             <Route exact path='/shell.html' render={() => null} />
             <Route

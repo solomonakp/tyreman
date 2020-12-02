@@ -3687,3 +3687,63 @@ export function BuyDunlop(props) {
     </svg>
   );
 }
+
+export function SideCircleSvg(props) {
+  return (
+    <svg
+      width='35'
+      height='300'
+      viewBox='0 0 59 431'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      {...props}
+    >
+      <circle
+        cx='215.5'
+        cy='215.5'
+        r='215.5'
+        fill='#0C1098'
+        fillOpacity='0.63'
+      />
+      <style jsx>{`
+        svg {
+          position: absolute;
+          transform: translateY(-50%);
+          top: 50%;
+          right: 0;
+          z-index: -1;
+        }
+      `}</style>
+    </svg>
+  );
+}
+
+export function Arrow(props) {
+  return (
+    <svg
+      version='1.1'
+      id='Capa_1'
+      xmlns='http://www.w3.org/2000/svg'
+      x='0px'
+      y='0px'
+      viewBox='0 0 512.002 512.002'
+      style={{ enableBackground: 'new 0 0 512.002 512.002' }}
+      {...props}
+    >
+      <path
+        d='M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+			L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+			l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z'
+      />
+      <style jsx>{`
+        svg {
+          transform: ${props.direction === 'left'
+            ? 'rotate(180deg)'
+            : 'rotate(0deg)'};
+          position: relative;
+          z-index: -1;
+        }
+      `}</style>
+    </svg>
+  );
+}

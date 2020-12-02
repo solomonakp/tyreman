@@ -73,14 +73,21 @@ class Header extends Component {
     let currentPos = window.pageYOffset;
     if (prevPos > currentPos) {
       navBar.style.transform = 'translateY(0)';
+      // when scroll position is greater than 1000
       if (prevPos > 100) {
+        // if navbar is light
         if (this.props.bannerIsLight) {
+          // navbar is tertiary color
           navBar.style.backgroundColor = theme.colors.tertiary;
         } else {
+          // else navbar is set to primary color
           navBar.style.backgroundColor = theme.colors.primary;
         }
       } else {
-        navBar.style.backgroundColor = 'transparent';
+        // if navbar color is blue by default
+        if (this.props.color === 'transparent') {
+          navBar.style.backgroundColor = 'transparent';
+        }
       }
     } else {
       navBar.style.transform = 'translateY(-118px)';
@@ -109,6 +116,7 @@ class Header extends Component {
       name,
       logoutUser,
       bannerIsLight,
+      color,
     } = this.props;
     const { user } = this.state;
     return (
@@ -235,11 +243,11 @@ class Header extends Component {
         <style jsx>
           {`
             nav.navbar {
-              background-color: transparent;
+              background-color: ${color};
               z-index: 2000;
               transition: transform 500ms ease-in,
                 background-color 500ms ease-in;
-              transform: translateY(-118px);
+              transform: translateY(0);
               flex-wrap: nowrap;
               @media (max-width: 991px) {
                 padding-right: 4px;

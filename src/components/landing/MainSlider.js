@@ -2,14 +2,14 @@ import React from 'react';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination, EffectFlip } from 'swiper';
+import SwiperCore, { Pagination, EffectFlip, Autoplay } from 'swiper';
 // Import Swiper styles
 import 'swiper/swiper-bundle.css';
 // image imports
 import tyres from '../../assets/img/tyres.png';
 import theme from '../theme';
 
-SwiperCore.use([Pagination, EffectFlip]);
+SwiperCore.use([Pagination, EffectFlip, Autoplay]);
 export default () => {
   const SliderContent = () => {
     return (
@@ -68,6 +68,7 @@ export default () => {
       grabCursor={true}
       loop={true}
       className={'main-slider'}
+      autoplay={{ delay: 7000 }}
       pagination={{
         clickable: true,
         dynamicBullets: false,

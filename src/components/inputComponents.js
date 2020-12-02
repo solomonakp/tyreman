@@ -115,6 +115,10 @@ export const Button = React.forwardRef(({ rippleClass, ...props }, ref) => {
             background-color: ${theme.colors.primary};
             width: 130px;
             height: 100%;
+            &.search {
+              font-family: Nunito;
+              font-weight: bold;
+            }
 
             &:hover,
             &:focus {
@@ -705,6 +709,7 @@ export const TextAreaAlt = (props) => {
               transition: border-color 150ms ease-out;
               border: 0;
               border-bottom: ${theme.border.inputAlt};
+              overflow-y: hidden;
               border-color: ${field.value && meta.error
                 ? theme.colors.danger
                 : field.value && !meta.error

@@ -76,3 +76,15 @@ export function isValid(n) {
   // remove all whitespace(s) before running test
   return pattern.test(number.replace(/\s+/g, ''));
 }
+
+export const range = (from, to, step = 1) => {
+  let i = from;
+  const range = [];
+
+  while (i <= to) {
+    range.push(i);
+    i += step;
+  }
+
+  return range;
+};

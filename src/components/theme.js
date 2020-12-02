@@ -2,6 +2,7 @@ const theme = {
   fontFamily: {
     circular: 'Circular std',
     circularBook: 'Circular Std Book',
+    nunito: 'nunito',
   },
   colors: {
     primary: '#0c1098',
@@ -26,6 +27,7 @@ const theme = {
     pageColor: '#E5E5E5',
     subscribeInput: '#F7F7F7',
     bannerBg: '#F5F7FA',
+    searchPlaceHolder: '#68686B',
     // text: '#333',
     // background: '#fff',
     // link: '#1eaaf1',

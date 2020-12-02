@@ -2,7 +2,7 @@ import React from 'react';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { EffectCoverflow } from 'swiper';
+import SwiperCore, { Autoplay, EffectCoverflow } from 'swiper';
 // Import Swiper styles
 import 'swiper/swiper-bundle.css';
 import theme from '../theme';
@@ -14,7 +14,7 @@ import test2 from '../../assets/img/test2.jpg';
 import test3 from '../../assets/img/test3.jpg';
 
 console.log(typeof test1);
-SwiperCore.use([EffectCoverflow]);
+SwiperCore.use([EffectCoverflow, Autoplay]);
 export default () => {
   const SliderCard = ({ name, image, testimony }) => {
     return (
@@ -111,6 +111,7 @@ export default () => {
       centeredSlides={true}
       initialSlide={1}
       className={'testimonial-slider'}
+      autoplay={{ delay: 3000 }}
       breakpoints={{
         300: {
           slidesPerView: 1,
